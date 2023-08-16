@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/stylesheet/style.css">
+        <title>Hair Master</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    </head>
+
+    <body>
+        <div class="div">
+
+
+            <div class=" h-100 mainDiv ">
+                <div class="samePadding">
+                    <div class="BookNow">
+                        <span>
+                            <h2>Booking Now</h2>
+                        </span>
+                    </div>
+
+                    <div class="TandD">
+                        <span>
+                            <h2>Pick Time and Date</h2>
+                        </span>
+                        <span class="xsBodyTextRegular">
+                            Enter time and date you want this services done.
+                        </span>
+                    </div>
+                    <div class="forDateAlone">
+                        <div>
+                            <span class="bodyTextRegular">Date</span>
+                        </div>
+                        <div class="mt-4">
+
+                            <div class='locationInputHolder'>
+                                <div class="inputt" data-bs-toggle="modal" data-bs-target="#searchModal">
+                                    <span class="pickadate" id="pickedDate">
+                                        Pick a Date
+                                    </span>
+                                </div>
+                                <div class="locationIcon">
+                                    <span class="material-symbols-outlined forInput">
+                                        calendar_month
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 mb-4 w-100  ">
+                                <div id="datepicker"></div>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <div>
+                                <span class="bodyTextRegular mb-4">Time</span>
+                            </div>
+
+                            <div class='locationInputHolder mt-3'>
+                                <input type="text" id="pickedTime" class="input" placeholder="Pick a Time" readonly />
+                                <div class="locationIcon mt-2" style="cursor: pointer;">
+                                    <span class="material-symbols-outlined forInput">
+                                        schedule
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="mt-4 mb-4">
+
+
+
+                                <div class="timePicker">
+                                    <div class="pullup">
+                                        <span class="bodyTextRegular">Pick Time</span>
+                                    </div>
+                                    <div class="timeList">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chooseSite">
+                            <div>
+                                <div class="borderForAll2">
+                                    <div class='locationInputHolder2'>
+                                        <input id="locationInput" type="text" class="input "
+                                            placeholder="Select Location" readonly />
+                                        <div class="locationIcon mt-2" style="cursor: pointer;">
+                                            <span class="material-symbols-outlined forInput" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseExample" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                expand_more
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="dropDownOptions p-3">
+                                            <div class="overLayPArt" id="offSiteOption">
+                                                <span class="bodyTextRegular">Off-site</span>
+                                            </div>
+                                            <div class="overLayPArt" id="onSiteOption">
+                                                <span class="bodyTextRegular">On-site</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="serviceDetails mb-4 ">
+                            <div class="detailsHolder">
+                                <div class="firstCentral">
+                                    <div>
+                                        <span class="bodyTextRegular colorchang">Service Details</span>
+                                    </div>
+                                    <div>
+                                        <div class="pushUp">
+                                            <h3>Ademi Hair</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="secondCentral">
+                                    <div class="olodiu">
+                                        <div class="row">
+                                            <div class="col stroke">
+                                                <div class="d-flex justify-content-center align-items-center ">
+                                                    <span class="material-symbols-outlined forInput">
+                                                        calendar_month
+                                                    </span> <span class="bodyTextRegular colorchang px-2">Date</span>
+                                                </div>
+                                            </div>
+                                            <div class="col strokeno">
+                                                <div class="d-flex justify-content-center align-items-center ">
+                                                    <span class="material-symbols-outlined forInput ">
+                                                        schedule
+                                                    </span>
+                                                    <span class="bodyTextRegular colorchang px-2">Time</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="secondCentral mt-3">
+                                    <div class="olodiu2">
+                                        <div class="row">
+                                            <div class="col ">
+                                                <div class="d-flex justify-content-center align-items-center ">
+                                                    <span class="">
+                                                        <h2 class="loose" id="selectedDate">
+                                                            22 March
+                                                        </h2>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col ">
+                                                <div class="d-flex justify-content-center align-items-center ">
+
+                                                    <span class="">
+                                                        <h2 class="loose" id="selectedTime">
+                                                            11:00AM
+                                                        </h2>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttonFlex">
+
+                        <button class="buttonYes" data-bs-toggle="modal" data-bs-target="#donebooking">Done</button>
+
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="container BottomNavigation">
+                    <div style="cursor: pointer;">
+                        <a href="./index.html" style="text-decoration: none;">
+                            <div class="d-flex justify-content-center w-100">
+                                <img src="./assets/images/Home-filled.svg" alt="Home icon" class='hair-brush2 blured'>
+                            </div>
+                            <div>
+                                <span class="xsBodyTextRegular wikoki">Home</span>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div style="cursor: pointer;">
+                        <a href="./bookings.html" style="text-decoration: none;">
+                            <div class="d-flex justify-content-center w-100">
+                                <img src="./assets/images/Nav-calender-blured.svg" alt="Home icon" class='hair-brush2 '>
+                            </div>
+                            <div>
+                                <span class="xsBodyTextRegular  colorChangeUp">Bookings</span>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div style="cursor: pointer;">
+                        <a href="./shop.html" style="text-decoration: none;">
+                            <div class="d-flex justify-content-center w-100">
+                                <img src="./assets/images/shopIcon.svg" alt="Home icon" class='hair-brush2 blured'>
+                            </div>
+                            <div>
+                                <span class="xsBodyTextRegular wikoki">Shop</span>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div style="cursor: pointer;">
+                        <a href="./cart.html" style="text-decoration: none;">
+                            <div class="d-flex justify-content-center w-100">
+                                <img src="./assets/images/cart-icon.svg" alt="Home icon" class='hair-brush2 blured'>
+                            </div>
+                            <div>
+                                <span class="xsBodyTextRegular wikoki">Cart</span>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div style="cursor: pointer;">
+                        <a href="./setting.html" style="text-decoration: none;">
+                            <div class="d-flex justify-content-center w-100">
+                                <img src="./assets/images/setting-icon.svg" alt="Home icon" class='hair-brush2 blured'>
+                            </div>
+                            <div>
+                                <span class="xsBodyTextRegular wikoki">Settings</span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        </div>
+
+
+        <div class="modal fade" id="donebooking" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="donebooking" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content oyazz">
+                    <div class="modal-header w-100  ">
+                        <div class="locationBorderBottom2">
+                            <div class="modal-title fs-5 w-100  d-flex justify-content-center" id="staticBackdropLabel">
+
+                                <span class="subHeadingMedium" style="text-align: center;margin-top: 20px;">
+
+                                    Booking Successful
+
+                                </span>
+                            </div>
+                            <div data-bs-dismiss="modal">
+                                <img src="./assets/images/modal-close.svg" alt="close button" class='closeButton'>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="wimps">
+                            <span>
+                                <img src="./assets/images/check.svg" alt="check" style="width: 80%;">
+                            </span>
+                        </div>
+                        <div class="tutorial">
+                            <h4 class="AllowAcess2">
+                                You have successfully booked<br /> this service
+                            </h4>
+                        </div>
+                        <div class="buttonFlex">
+                            <a href="./bookings.html" style="text-decoration: none;">
+                                <button class="buttonYesForNon">Continue</button>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="index.js"></script>
+
+        <script>
+            // Function to set the selected mode in localStorage
+            function setModePreference(isDarkMode) {
+                localStorage.setItem('darkMode', isDarkMode);
+            }
+
+            // Function to retrieve the selected mode from localStorage
+            function getModePreference() {
+                return localStorage.getItem('darkMode') === 'true';
+            }
+
+            // Get references to elements
+            const body = document.querySelector('.mainDiv');
+            const checkbox = document.getElementById('checkbox');
+            // const bottomNavigation = document.querySelector('.BottomNavigation');
+
+            // Set initial mode based on localStorage
+            const initialDarkMode = getModePreference();
+            body.classList.toggle('dark', initialDarkMode);
+            // bottomNavigation.classList.toggle('dark', initialDarkMode);
+
+            // Apply styles based on initial mode
+            if (initialDarkMode) {
+                body.style.color = '#fff';
+                // bottomNavigation.style.backgroundColor = '#292c35';
+            }
+
+            // Listen for changes to the checkbox
+            checkbox.addEventListener('change', () => {
+                const isDarkMode = checkbox.checked;
+                body.classList.toggle('dark', isDarkMode);
+                // bottomNavigation.classList.toggle('dark', isDarkMode);
+                setModePreference(isDarkMode);
+
+                // Update styles based on selected mode
+                if (isDarkMode) {
+                    body.style.color = '#fff';
+                    // bottomNavigation.style.backgroundColor = '#292c35';
+                } else {
+                    body.style.color = '#000'; // Change this to the desired black color
+                    // bottomNavigation.style.backgroundColor = '#fff'; 
+                }
+            });
+
+
+        </script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
