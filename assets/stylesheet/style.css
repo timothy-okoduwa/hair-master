@@ -1393,23 +1393,34 @@ select {
   margin-right: 6px;
   color: #000 !important;
 }
+.iti-mobile .iti--container {
+  top: 30px !important;
+  bottom: 30px !important;
+  left: 0px !important;
+  /* right: 30px; i removed this right */
+  position: fixed !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
 .iti__country-list {
   position: absolute !important;
   z-index: 2 !important;
   list-style: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  left: 0 !important; /* Align with the left edge of the screen */
-  /* width: 100% !important;  */
+  max-width: 300px !important;
+  box-sizing: border-box !important;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2) !important;
-  background-color: white !important;
+  background-color: #ffffff !important;
   border: 1px solid #ccc !important;
-  white-space: nowrap !important;
+  white-space: pre-wrap !important;
   max-height: 200px !important;
   overflow-y: scroll !important;
   -webkit-overflow-scrolling: touch !important;
   border-radius: 8px !important;
 }
+
 .iti__country {
   display: flex !important;
   align-items: center !important;
@@ -1418,6 +1429,7 @@ select {
   flex-wrap: wrap !important;
   margin-bottom: 13px !important;
 }
+
 .dateo {
   color: var(--grey-text, #888);
 }
