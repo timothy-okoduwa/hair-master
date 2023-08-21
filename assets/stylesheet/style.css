@@ -366,6 +366,12 @@ p {
 }
 .locationIcon {
   margin-left: -50px;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  width: 48px;
+  align-items: center;
 }
 .forInput {
   color: #b1b4bd;
