@@ -1419,7 +1419,14 @@ select {
   flex-wrap: wrap !important;
   margin-bottom: 13px !important;
 }
-
+.nju {
+  color: var(--text, #2e2e2e);
+  font-family: Lexend;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 .dateo {
   color: var(--grey-text, #888);
 }
@@ -1579,7 +1586,12 @@ select {
   box-shadow: none !important;
   cursor: pointer !important;
 }
-
+.yesToheaven {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 @media screen and (max-width: 768px) {
   .borderr {
     border-right: 1px solid #2e2e2e00;
