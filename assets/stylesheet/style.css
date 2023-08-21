@@ -1,3 +1,8 @@
+body {
+  background-color: #eff2f5 !important;
+  height: 100% !important;
+}
+
 h1 {
   font-family: Lexend !important;
   font-size: 32px !important;
@@ -143,15 +148,17 @@ p {
   background: var(--secondary-colour-white, #ffffff);
   padding-left: 0px !important;
   padding-right: 0px !important;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; */
   transition: background 0.2s linear;
   align-items: center;
   width: 428px;
   height: 100vh;
 }
-
+.vh {
+  height: 100vh;
+}
 .mainDiv.dark {
   background-color: #292c35;
 } /* #9b59b6 */

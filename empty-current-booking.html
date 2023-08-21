@@ -37,44 +37,46 @@
                         </div>
                     </div>
                 </div>
-                <div class="container w-100 mt-4 gogm" style="display: none;">
-                    <div class="gored">
-                        <span class="px-2">Product has been deleted successfully</span>
-                        <span>
-                            <img src="./assets/images/redcancle.png" alt="redcancle" style="cursor: pointer;"
-                                class="closeup" onclick="closeRedDiv()">
-                        </span>
-                    </div>
-                </div>
+
                 <div class="booksis">
                     <span>
-                        <h2>Booking Cart</h2>
+                        <h2>Booking</h2>
                     </span>
                 </div>
                 <div class="container">
-
-                    <div class="mt-5">
-                        <div class="yesToheaven">
-                            <div>
-                                <div>
-                                    <img src="./assets/images/empty-cart.svg" alt="empty cart">
+                    <div class="mt-4">
+                        <div class="row mb-5">
+                            <div class="col w-100 d-flex justify-content-center">
+                                <div class="underLine">
+                                    <span class="bodyTextRegular">Current Booking</span>
                                 </div>
                             </div>
-                            <div class="mt-5" style="text-align: center;">
-                                <div class="likeh4">Cart is Empty</div>
-                                <div class="bodyTextRegular mt-3">Add products to you cart</div>
+                            <div class=" col w-100 d-flex justify-content-center">
+                                <a href="./empty-booking-history.html" style="text-decoration: none;">
+                                    <div class="underLine2">
+                                        <span class="bodyTextRegular">Booking History</span>
+                                    </div>
+                                </a>
+
                             </div>
                         </div>
-
-
-
                     </div>
 
 
-                    <div class="buttonFlex mt-3 mb-3">
-                        <a href="./shop.html" style="text-decoration: none;">
-                            <button class="buttonYes2">Go to Shop</button>
-                        </a>
+                    <div class="communityUtilitation">
+                        <div>
+                            <div class="yesToheaven">
+                                <div>
+                                    <div>
+                                        <img src="./assets/images/empty-calender.svg" alt="empty cart">
+                                    </div>
+                                </div>
+                                <div class="mt-5 mb-5" style="text-align: center;">
+                                    <div class="likeh4">Current Booking is Empty</div>
+                                    <div class="bodyTextRegular mt-3">You will see all booking request here</div>
+                                </div>
+                            </div>
+                        </div>
 
 
                     </div>
@@ -97,11 +99,10 @@
                     <div style="cursor: pointer;">
                         <a href="./bookings.html" style="text-decoration: none;">
                             <div class="d-flex justify-content-center w-100">
-                                <img src="./assets/images/Nav-calender-blured.svg" alt="Home icon"
-                                    class='hair-brush2 blured'>
+                                <img src="./assets/images/Nav-calender-blured.svg" alt="Home icon" class='hair-brush2 '>
                             </div>
                             <div>
-                                <span class="xsBodyTextRegular  wikoki">Bookings</span>
+                                <span class="xsBodyTextRegular  colorChangeUp">Bookings</span>
                             </div>
                         </a>
 
@@ -119,10 +120,10 @@
                     <div style="cursor: pointer;">
                         <a href="./cart.html" style="text-decoration: none;">
                             <div class="d-flex justify-content-center w-100">
-                                <img src="./assets/images/cart-icon.svg" alt="Home icon" class='hair-brush2 '>
+                                <img src="./assets/images/cart-icon.svg" alt="Home icon" class='hair-brush2 blured'>
                             </div>
                             <div>
-                                <span class="xsBodyTextRegular colorChangeUp ">Cart</span>
+                                <span class="xsBodyTextRegular wikoki">Cart</span>
                             </div>
                         </a>
                     </div>
@@ -140,7 +141,42 @@
 
 
 
+                <div class="modal fade" id="cancelbooking" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="cancelbooking" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered ">
+                        <div class="modal-content oyazz">
+                            <div class="modal-header w-100  ">
+                                <div class="locationBorderBottom2">
+                                    <div class="modal-title fs-5 w-100  d-flex justify-content-center"
+                                        id="staticBackdropLabel">
 
+                                        <span class="subHeadingMedium" style="text-align: center;" class="maya">
+                                            Cancel Booking
+                                        </span>
+                                    </div>
+                                    <div data-bs-dismiss="modal" style="cursor: pointer;">
+                                        <img src="./assets/images/modal-close.svg" alt="close button"
+                                            class='closeButton'>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <h4 class="AllowAcess maya">
+                                        Are sure you want to cancel this<br /> booking?
+                                    </h4>
+                                </div>
+                                <div class="buttonFlex">
+                                    <button class="buttonYes2" onclick="handleYesButtonClick()"
+                                        data-bs-dismiss="modal">Yes</button>
+                                    <button class="buttonNo" data-bs-dismiss="modal">No</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
@@ -168,38 +204,40 @@
             // Get references to elements
             const body = document.querySelector('.mainDiv');
             const checkbox = document.getElementById('checkbox');
-            // const bottomNavigation = document.querySelector('.BottomNavigation');
+            const bottomNavigation = document.querySelector('.underLine');
 
             // Set initial mode based on localStorage
             const initialDarkMode = getModePreference();
             body.classList.toggle('dark', initialDarkMode);
-            // bottomNavigation.classList.toggle('dark', initialDarkMode);
+            bottomNavigation.classList.toggle('dark', initialDarkMode);
 
             // Apply styles based on initial mode
             if (initialDarkMode) {
                 body.style.color = '#fff';
-                // bottomNavigation.style.backgroundColor = '#292c35';
+                bottomNavigation.style.borderBottom = '2px solid white'; // Set the initial border color for dark mode
+            } else {
+                bottomNavigation.style.borderBottom = '2px solid #2e2e2e'; // Set the initial border color for white mode
             }
 
             // Listen for changes to the checkbox
             checkbox.addEventListener('change', () => {
                 const isDarkMode = checkbox.checked;
                 body.classList.toggle('dark', isDarkMode);
-                // bottomNavigation.classList.toggle('dark', isDarkMode);
+                bottomNavigation.classList.toggle('dark', isDarkMode);
                 setModePreference(isDarkMode);
 
                 // Update styles based on selected mode
                 if (isDarkMode) {
                     body.style.color = '#fff';
-                    // bottomNavigation.style.backgroundColor = '#292c35';
+                    bottomNavigation.style.borderBottom = '2px solid white'; // Set border color for dark mode
                 } else {
-                    body.style.color = '#000'; // Change this to the desired black color
-                    // bottomNavigation.style.backgroundColor = '#fff'; 
+                    body.style.color = '#000';
+                    bottomNavigation.style.borderBottom = '2px solid #2e2e2e'; // Set border color for white mode
                 }
             });
 
-
         </script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
             crossorigin="anonymous"></script>
